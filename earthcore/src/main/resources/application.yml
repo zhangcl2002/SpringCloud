@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri:   http://michaelzhang@gitlab.aegonthtf.com/aegonthtf-config-center/app-config-center.git
+          username: michaelzhang
+          password: Aegon2015

@@ -1,0 +1,28 @@
+server:
+  port: 8089   
+  context-path: /microsvcsentence 
+  
+management:
+  security:
+    enabled: false
+  context-path: /microsvcsentence   
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-dev.aegonthtf.com/eureka/
+  instance:
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+    prefer-ip-address: true
+    metadata-map:
+      management.context-path: ${management.context-path}         
+   
+spring:
+  zipkin:
+    # Uncomment to send to zipkin, replacing 192.168.99.100 with your zipkin IP address
+    baseUrl: http://zipkin-dev.aegonthtf.com/
+  sleuth:
+    sampler:
+      percentage: 1.0          

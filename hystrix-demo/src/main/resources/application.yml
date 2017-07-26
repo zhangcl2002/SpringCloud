@@ -1,0 +1,19 @@
+eureka:
+  instance:
+#    hostname: page-notifier-svc
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-dev.aegonthtf.com/eureka/
+server:
+  port: 8080
+spring:
+  zipkin:    
+    baseUrl: http://zipkin-dev.aegonthtf.com/
+  sleuth:
+    sampler:
+      percentage: 1.0
+    rxjava:
+      schedulers:
+        hook:
+          enabled: false

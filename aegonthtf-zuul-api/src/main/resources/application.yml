@@ -1,0 +1,16 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-dev.aegonthtf.com/eureka/    
+server:
+  port: 8080
+
+
+#zuul:
+#  routes:
+#    notifier:
+#      path: /aegonthtf-api/**
+#      serviceId: notifier
+      #url: http://10.72.240.73:32361/notify

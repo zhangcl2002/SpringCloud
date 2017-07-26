@@ -1,0 +1,11 @@
+logging:
+    config: http://earthcore.aegonthtf.com/turbine/default/master/logback-spring.xml  
+spring:
+  application:
+    name: turbine
+  cloud:
+    config:
+      uri: http://earthcore.aegonthtf.com           
+management:
+  security:
+    enabled: false

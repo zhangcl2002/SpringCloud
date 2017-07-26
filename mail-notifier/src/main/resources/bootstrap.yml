@@ -1,0 +1,16 @@
+logging:
+    config: http://earthcore.aegonthtf.com/*/default/master/logback-spring.xml  
+spring:
+  application:
+    name: mail-notifier
+  cloud:
+    config:
+      uri: http://earthcore.aegonthtf.com
+      #overrideSystemProperties: false  # allows -D switches on java command line to take effect and not be overwritten by config repo values ( true is the default)
+      #overrideNone: false # allows for config repo values to override 'local' values ( false is the default)
+health:
+  config:
+    enabled: false            
+management:
+  security:
+    enabled: false

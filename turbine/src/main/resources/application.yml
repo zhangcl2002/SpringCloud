@@ -1,0 +1,14 @@
+spring:
+  application.name: turbine
+server:
+  port: 8080
+security:
+  basic:
+    enabled: false
+turbine:    
+  appConfig: send-message,mail-notifier,page-notifier 
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-dev.aegonthtf.com/eureka/

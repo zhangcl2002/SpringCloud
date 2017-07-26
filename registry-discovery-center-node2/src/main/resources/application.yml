@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8080
+eureka:
+  environment: aegonthtf private cloud  
+  datacenter: development
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: true
+    renewalPercentThreshold: 0.3
+  instance:
+    hostname: registry-discovery-center-node2-svc                                
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl: 
+      defaultZone: http://registry-discovery-center-node1-svc:8080/eureka/,http://registry-discovery-center-node3-svc:8080/eureka/
